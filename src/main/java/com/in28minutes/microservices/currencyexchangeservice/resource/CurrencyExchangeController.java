@@ -40,7 +40,7 @@ public class CurrencyExchangeController {
 		LOGGER.info("{} {} {}", from, to, exchangeValue);
 
 		if (exchangeValue == null) {
-			throw new RuntimeException("Unable to find data to convert " + from + " to " + to);
+			    throw new RuntimeException("Unable to find data to convert " + from + " to " + to);
 		}
 
 		exchangeValue.setExchangeEnvironmentInfo(instanceInformationService.retrieveInstanceInfo());

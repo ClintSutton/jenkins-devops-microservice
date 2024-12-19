@@ -28,12 +28,12 @@ public class CurrencyExchangeSteps {
                 .build();
         String url = "http://localhost:8000/currency-exchange/from/"+from+"/to/"+to;
         System.out.println(url);
-		Response request = when().request(Method.GET,url);
-		ValidatableResponse then = request.then();
-		ValidatableResponse statusCode = then.statusCode(200);
-		ExtractableResponse<Response> extract = statusCode.extract();
-		//then.extract().path("");
-		output = extract.path("conversionMultiple");
+		        Response request = when().request(Method.GET,url);
+		        ValidatableResponse then = request.then();
+		        ValidatableResponse statusCode = then.statusCode(200);
+		        ExtractableResponse<Response> extract = statusCode.extract();
+		        //then.extract().path("");
+		        output = extract.path("conversionMultiple");
     }
 
     @When("^the system is asked to provide the conversion rate$")
